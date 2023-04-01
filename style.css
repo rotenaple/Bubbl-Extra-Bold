@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'Bubbl';
-    src: url('Exports/Bubbl23w13b-Black.otf') format('otf');
+    src: url('Exports/Bubbl23w13b-Black.otf') format('otf'),
+	url('Exports/Bubbl-Black.woff2') format('woff2'),
+	 url('Exports/Bubbl-Black.woff') format('woff');
 }
 
 
@@ -134,14 +136,14 @@ margin-right: 0.5em;
 }
 
 .sample-24px{
-		font-family: 'Jdynpara', serif;
+		font-family: 'Bubbl', serif;
 		font-size: 24px;
 		line-height: 1em;
 		margin-top: 0;
 		margin-bottom: 0.3em;
 }
 .sample-30px{
-		font-family: 'Jdynpara', serif;
+		font-family: 'Bubbl', serif;
 		font-size: 30px;
 		line-height: 1em;
 		margin-top: 0;
@@ -149,21 +151,21 @@ margin-right: 0.5em;
 }
 
 .sample-36px{
-		font-family: 'Jdynpara', serif;
+		font-family: 'Bubbl', serif;
 		font-size: 36px;
 		line-height: 1em;
 		margin-top: 0;
 		margin-bottom: 0.3em;
 }
 .sample-48px{
-		font-family: 'Jdynpara', serif;
+		font-family: 'Bubbl', serif;
 		font-size: 48px;
 		line-height: 1em;
 		margin-top: 0;
 		margin-bottom: 0.3em;
 }
 .sample-60px{
-		font-family: 'Jdynpara', serif;
+		font-family: 'Bubbl', serif;
 		font-size: 60px;
 		line-height: 1em;
 		margin-top: 0;
@@ -171,7 +173,7 @@ margin-right: 0.5em;
 }
 
 .sample-textbox{
-		font-family: 'Jdynpara', serif;
+		font-family: 'Bubbl', serif;
 		font-size: 30px;
 		width: 97%;
 		height: 5em;
