@@ -3,7 +3,7 @@
 DisplayStrings = (
 "How/space vexingly/space quick/space daft/space zebras/space jump!/space Bubbl/space makes/space them/space look/space even/space more/space zany/space and/space quirky.",
 "/Icaron",
-"/Hcircumflex"
+"Á"
 );
 copyright = "Copyright (c) 2023, rotenaple (rotenaple@protonmail.com)";
 customParameters = (
