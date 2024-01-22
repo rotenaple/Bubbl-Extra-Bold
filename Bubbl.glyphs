@@ -1,14 +1,7 @@
 {
 .appVersion = "118";
 DisplayStrings = (
-"Tôi/space ch/ihookabove/space mu/ocircumflexacute n/space/dcroat/uhorn/ohorndotbelow c/space ch/abrevehookabove ng/space giàu/space ch/abrevehookabove ng/space nghèo,/space ngh/itilde a/space",
-"/tildecomb/tildecomb.i/Itilde/itilde",
-"/brevecomb_tildecomb/circumflexcomb_tildecomb/circumflexcomb/circumflexcomb.i/caroncomb.i/Icaron/caroncomb/brevecomb",
-"/circumflexcomb_hookabovecomb",
-"/cedillacomb",
-"Ç/Scedilla ç/scedilla/ecedilla",
-"l/l.ss01",
-"/Eng/Nhookleft"
+"X/uhorn a/space kia/space tranh/space mi/ecircumflexacute ng/space m/ocircumflexgrave i,/space ngày/space nay/space tranh/space nhau/space ti/ecircumflexgrave n./space V/adotbelow n/space s/uhorndotbelow/space b/acircumflexacute t/space nh/uhorn/space nhàn./space Tôi/space ch/ihookabove/space mu/ocircumflexacute n/space/dcroat/uhorn/ohorndotbelow c/space ch/abrevehookabove ng/space giàu/space ch/abrevehookabove ng/space nghèo,/space ngh/itilde a/space là/space/ohornhookabove/space cái/space/dcroat/idotbelow a/space v/idotbelow/space mà/space ng/uhorn/ohorngrave i/space/dcroat/ohorngrave i/space không/space khinh/space b/ihookabove/space n/ocircumflexhookabove i,/space c/utilde ng/space nh/uhorn/space không/space ghen/space t/ydotbelow/space/dcroat/uhorn/ohorndotbelow c./space B/ecircumflexgrave/space trên/space/ohornhookabove/space ch/abrevehookabove ng/space chính/space ngôi,/space/dcroat/ecircumflexhookabove/space cho/space k/ehookabove/space d/uhorn/ohornacute i/space chúng/space tôi/space h/ocircumflextilde n/space hào./space Con/space giun/space xéo/space mãi/space c/utilde ng/space qu/abrevegrave n./space Khôn/space cho/space ng/uhorn/ohorngrave i/space ta/space dái,/space d/adotbelow i/space cho/space ng/uhorn/ohorngrave i/space ta/space th/uhorn/ohorn ng,/space d/ohornhookabove/space d/ohornhookabove/space/uhorn/ohorn ng/space/uhorn/ohorn ng/space thì/space ng/uhorn/ohorngrave i/space ta/space ghét./space M/acircumflexdotbelow t/space ít/space ru/ocircumflexgrave i/space nhi/ecircumflexgrave u./space Chó/space ngáp/space ph/ahookabove i/space ru/ocircumflexgrave i./space Làm/space quan/space có/space gi/odotbelow ng,/space làm/space dáng/space có/space hình."
 );
 copyright = "Copyright (c) 2024, rotenaple (rotenaple@protonmail.com)";
 customParameters = (
@@ -1535,7 +1528,7 @@ unicode = 018A;
 {
 color = 4;
 glyphname = E;
-lastChange = "2024-01-22 11:21:56 +0000";
+lastChange = "2024-01-22 12:38:36 +0000";
 layers = (
 {
 anchors = (
@@ -31454,7 +31447,7 @@ unicode = 003B;
 {
 color = 4;
 glyphname = ellipsis;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32072,7 +32065,7 @@ unicode = 007B;
 {
 color = 4;
 glyphname = braceright;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32321,7 +32314,7 @@ unicode = 201E;
 {
 color = 3;
 glyphname = quotedblleft;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32348,7 +32341,7 @@ unicode = 201C;
 {
 color = 3;
 glyphname = quotedblright;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32418,7 +32411,7 @@ unicode = 2019;
 {
 color = 4;
 glyphname = guillemetleft;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32444,7 +32437,7 @@ unicode = 00AB;
 {
 color = 4;
 glyphname = guillemetright;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32495,7 +32488,7 @@ unicode = 2039;
 {
 color = 4;
 glyphname = guilsinglright;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -32517,7 +32510,7 @@ unicode = 203A;
 {
 color = 3;
 glyphname = quotedbl;
-lastChange = "2024-01-22 12:36:54 +0000";
+lastChange = "2024-01-22 12:38:02 +0000";
 layers = (
 {
 components = (
@@ -36814,7 +36807,7 @@ width = 499;
 {
 color = 4;
 glyphname = circumflexcomb_hookabovecomb;
-lastChange = "2024-01-22 11:26:05 +0000";
+lastChange = "2024-01-22 12:40:45 +0000";
 layers = (
 {
 anchors = (
@@ -36875,37 +36868,37 @@ paths = (
 {
 closed = 1;
 nodes = (
-"374 1041 LINE SMOOTH",
-"382 1035 OFFCURVE",
-"390 1037 OFFCURVE",
-"394 1048 CURVE SMOOTH",
-"400 1062 OFFCURVE",
-"408 1073 OFFCURVE",
-"419 1073 CURVE SMOOTH",
-"431 1073 OFFCURVE",
-"438 1063 OFFCURVE",
-"438 1050 CURVE SMOOTH",
-"438 1024 OFFCURVE",
-"428 1010 OFFCURVE",
-"405 994 CURVE",
-"372 973 OFFCURVE",
-"360 976 OFFCURVE",
-"360 961 CURVE SMOOTH",
-"360 945 OFFCURVE",
-"392 928 OFFCURVE",
-"435 928 CURVE SMOOTH",
-"500 928 OFFCURVE",
-"567 973 OFFCURVE",
-"567 1053 CURVE SMOOTH",
-"567 1126 OFFCURVE",
-"512 1170 OFFCURVE",
-"425 1170 CURVE SMOOTH",
-"364 1170 OFFCURVE",
-"323 1153 OFFCURVE",
-"294 1117 CURVE SMOOTH",
-"288 1109 OFFCURVE",
-"289 1101 OFFCURVE",
-"297 1096 CURVE SMOOTH"
+"365 1041 LINE SMOOTH",
+"373 1035 OFFCURVE",
+"381 1037 OFFCURVE",
+"385 1048 CURVE SMOOTH",
+"391 1062 OFFCURVE",
+"399 1073 OFFCURVE",
+"410 1073 CURVE SMOOTH",
+"422 1073 OFFCURVE",
+"429 1063 OFFCURVE",
+"429 1050 CURVE SMOOTH",
+"429 1024 OFFCURVE",
+"419 1010 OFFCURVE",
+"396 994 CURVE",
+"363 973 OFFCURVE",
+"351 976 OFFCURVE",
+"351 961 CURVE SMOOTH",
+"351 945 OFFCURVE",
+"383 928 OFFCURVE",
+"426 928 CURVE SMOOTH",
+"491 928 OFFCURVE",
+"558 973 OFFCURVE",
+"558 1053 CURVE SMOOTH",
+"558 1126 OFFCURVE",
+"503 1170 OFFCURVE",
+"416 1170 CURVE SMOOTH",
+"355 1170 OFFCURVE",
+"314 1153 OFFCURVE",
+"285 1117 CURVE SMOOTH",
+"279 1109 OFFCURVE",
+"280 1101 OFFCURVE",
+"288 1096 CURVE SMOOTH"
 );
 }
 );
