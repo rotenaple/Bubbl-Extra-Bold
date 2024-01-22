@@ -1,7 +1,7 @@
 {
 .appVersion = "118";
 DisplayStrings = (
-"X/uhorn a/space kia/space tranh/space mi/ecircumflexacute ng/space m/ocircumflexgrave i,/space ngày/space nay/space tranh/space nhau/space ti/ecircumflexgrave n./space V/adotbelow n/space s/uhorndotbelow/space b/acircumflexacute t/space nh/uhorn/space nhàn./space Tôi/space ch/ihookabove/space mu/ocircumflexacute n/space/dcroat/uhorn/ohorndotbelow c/space ch/abrevehookabove ng/space giàu/space ch/abrevehookabove ng/space nghèo,/space ngh/itilde a/space là/space/ohornhookabove/space cái/space/dcroat/idotbelow a/space v/idotbelow/space mà/space ng/uhorn/ohorngrave i/space/dcroat/ohorngrave i/space không/space khinh/space b/ihookabove/space n/ocircumflexhookabove i,/space c/utilde ng/space nh/uhorn/space không/space ghen/space t/ydotbelow/space/dcroat/uhorn/ohorndotbelow c./space B/ecircumflexgrave/space trên/space/ohornhookabove/space ch/abrevehookabove ng/space chính/space ngôi,/space/dcroat/ecircumflexhookabove/space cho/space k/ehookabove/space d/uhorn/ohornacute i/space chúng/space tôi/space h/ocircumflextilde n/space hào./space Con/space giun/space xéo/space mãi/space c/utilde ng/space qu/abrevegrave n./space Khôn/space cho/space ng/uhorn/ohorngrave i/space ta/space dái,/space d/adotbelow i/space cho/space ng/uhorn/ohorngrave i/space ta/space th/uhorn/ohorn ng,/space d/ohornhookabove/space d/ohornhookabove/space/uhorn/ohorn ng/space/uhorn/ohorn ng/space thì/space ng/uhorn/ohorngrave i/space ta/space ghét./space M/acircumflexdotbelow t/space ít/space ru/ocircumflexgrave i/space nhi/ecircumflexgrave u./space Chó/space ngáp/space ph/ahookabove i/space ru/ocircumflexgrave i./space Làm/space quan/space có/space gi/odotbelow ng,/space làm/space dáng/space có/space hình."
+"Take/space the/space chef/space d'/oe reuvre!\012Ydes,/space Yffignac\012and/space Ygrande/space are/space in/space France:/space so/space are/space Ypres,/space Les\012Woëvres,/space the/space Fôret/space de/space W/oe vres,/space the/space Voire/space and\012Vauvise./space Yves/space is/space in/space heaven;/space D'Amboise/space is/space in\012jail./space Lyford's/space in/space Texas/space &/space L'Anse-aux-Griffons/space in\012Québec;/space the/space/Lslash yna/space in/space Poland./space Yriarte,/space Yciar/space and\012Ysa/ydieresis e/space are/space at/space Yale./space Kyoto/space and/space Ryotsu/space are/space both\012in/space Japan,/space Kwikpak/space on/space the/space Yukon/space delta,/space Kvæven\012in/space Norway,/space Kyulu/space in/space Kenya,/space not/space in/space Rwanda/space ....\012Walton's/space in/space West/space Virginia,/space but/space «Wren»/space is/space in\012Oregon./space Tlálpán/space is/space near/space Xochimilco/space in/space México.\012The/space Zygos/space &/space Xylophagou/space are/space in/space Cyprus,/space Zwettl\012in/space Austria,/space Frænø/space in/space Denmark,/space the/space Vøfingsfossen\012and/space Værerøy/space in/space Norway./space Tchula/space is/space in/space Mississippi,\012the/space Tittabawassee/space in/space Michigan./space Twodot/space is/space here\012in/space Montana,/space Ywamun/space in/space Burma./space Yggdrasil/space and\012Ymir,/space Yngvi/space and/space Vóden,/space Vídrið/space and/space Skeggjöld\012and/space Týr/space are/space all/space in/space the/space Eddas./space Tørberget/space and/space Våg,\012of/space course,/space are/space in/space Norway,/space Ktipas/space and/space Tmolos\012in/space Greece,/space but/space Vázquez/space is/space in/space Argentina,/space Vreden\012in/space Germany,/space Von-Vincke-Straße/space in/space Münster,\012Vdovino/space in/space Russia,/space Ytterbium/space in/space the/space periodic\012table./space Are/space Toussaint/space L'Ouverture,/space Wölffiin,\012Wolfe,/space Milosz/space and/space W/umacron/space W/ucaron/space all/space in/space the/space library?\0121510-1620,/space 11:00/space pm,/space and/space the/space 1980s/space are/space over."
 );
 copyright = "Copyright (c) 2024, rotenaple (rotenaple@protonmail.com)";
 customParameters = (
@@ -9993,7 +9993,7 @@ unicode = 0250;
 {
 color = 4;
 glyphname = ae;
-lastChange = "2024-01-22 11:19:45 +0000";
+lastChange = "2024-01-22 12:55:32 +0000";
 layers = (
 {
 anchors = (
@@ -11383,7 +11383,7 @@ unicode = 1EC5;
 {
 color = 4;
 glyphname = edieresis;
-lastChange = "2024-01-22 11:24:30 +0000";
+lastChange = "2024-01-22 12:51:41 +0000";
 layers = (
 {
 components = (
@@ -15625,7 +15625,7 @@ unicode = 00F1;
 {
 color = 4;
 glyphname = o;
-lastChange = "2024-01-22 11:21:56 +0000";
+lastChange = "2024-01-22 12:55:28 +0000";
 layers = (
 {
 anchors = (
@@ -32314,7 +32314,7 @@ unicode = 201E;
 {
 color = 3;
 glyphname = quotedblleft;
-lastChange = "2024-01-22 12:38:02 +0000";
+lastChange = "2024-01-22 12:49:35 +0000";
 layers = (
 {
 components = (
@@ -32341,7 +32341,7 @@ unicode = 201C;
 {
 color = 3;
 glyphname = quotedblright;
-lastChange = "2024-01-22 12:38:02 +0000";
+lastChange = "2024-01-22 12:47:31 +0000";
 layers = (
 {
 components = (
@@ -32409,9 +32409,9 @@ rightKerningGroup = high_punc;
 unicode = 2019;
 },
 {
-color = 4;
+color = 3;
 glyphname = guillemetleft;
-lastChange = "2024-01-22 12:38:02 +0000";
+lastChange = "2024-01-22 13:04:57 +0000";
 layers = (
 {
 components = (
@@ -32435,9 +32435,9 @@ rightKerningGroup = mid_punc;
 unicode = 00AB;
 },
 {
-color = 4;
+color = 3;
 glyphname = guillemetright;
-lastChange = "2024-01-22 12:38:02 +0000";
+lastChange = "2024-01-22 13:04:57 +0000";
 layers = (
 {
 components = (
@@ -32488,7 +32488,7 @@ unicode = 2039;
 {
 color = 4;
 glyphname = guilsinglright;
-lastChange = "2024-01-22 12:38:02 +0000";
+lastChange = "2024-01-22 12:53:50 +0000";
 layers = (
 {
 components = (
@@ -32510,7 +32510,7 @@ unicode = 203A;
 {
 color = 3;
 glyphname = quotedbl;
-lastChange = "2024-01-22 12:38:02 +0000";
+lastChange = "2024-01-22 12:49:35 +0000";
 layers = (
 {
 components = (
@@ -32536,7 +32536,7 @@ unicode = 0022;
 {
 color = 3;
 glyphname = quotesingle;
-lastChange = "2024-01-22 12:29:11 +0000";
+lastChange = "2024-01-22 12:53:18 +0000";
 layers = (
 {
 components = (
@@ -37212,6 +37212,7 @@ Y = -125;
 "@MMK_R_W" = -60;
 "@MMK_R_Y" = -150;
 "@MMK_R_f" = -50;
+"@MMK_R_high_punc" = -120;
 "@MMK_R_j" = -140;
 "@MMK_R_o" = -20;
 "@MMK_R_t" = -50;
@@ -37230,6 +37231,7 @@ Y = -125;
 "@MMK_R_low_punc" = -45;
 "@MMK_R_o" = -20;
 "@MMK_R_s" = -30;
+"@MMK_R_v" = -40;
 "@MMK_R_x" = -20;
 };
 "@MMK_L_P" = {
@@ -37385,6 +37387,7 @@ Y = -125;
 };
 "@MMK_L_e" = {
 "@MMK_R_j" = -225;
+"@MMK_R_v" = -40;
 };
 "@MMK_L_f" = {
 "@MMK_R_4" = -50;
@@ -37536,7 +37539,7 @@ florin = 0;
 "@MMK_R_p" = -10;
 "@MMK_R_s" = -25;
 "@MMK_R_t" = -30;
-"@MMK_R_v" = -45;
+"@MMK_R_v" = -40;
 "@MMK_R_w" = -25;
 "@MMK_R_x" = -50;
 "@MMK_R_y" = -50;
@@ -37625,7 +37628,7 @@ florin = 0;
 "@MMK_R_j" = -110;
 "@MMK_R_low_punc" = -100;
 "@MMK_R_lslash" = -40;
-"@MMK_R_o" = -20;
+"@MMK_R_o" = -40;
 };
 "@MMK_L_w" = {
 "@MMK_R_A" = -60;
@@ -37698,6 +37701,9 @@ a = {
 };
 florin = {
 "@MMK_R_j" = -120;
+};
+quotesingle = {
+"@MMK_R_A" = -100;
 };
 };
 };
