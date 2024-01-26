@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Bubbl';
+    src: url('../Exports/24w04a/Bubbl-ExtraBold.otf"') format('otf'),
+	url('../Exports/24w04a/Bubbl-ExtraBold.woff2') format('woff2'),
+	 url('../Exports/24w04a/Bubbl-ExtraBold.woff') format('woff');
+}
+
+h1 {
+	font-family: "Bubbl";
+}
+
+.sample-1{
+		font-family: 'Bubbl', serif;
+		font-size: 1.25rem;
+		line-height: 1.2em;
+}
+.sample-2{
+		font-family: 'Bubbl', serif;
+		font-size: 1.5rem;
+		line-height: 1.2em;
+}
+
+.sample-3{
+		font-family: 'Bubbl', serif;
+		font-size: 1.75rem;
+		line-height: 1.2em;
+}
+.sample-4{
+		font-family: 'Bubbl', serif;
+		font-size: 2rem;
+		line-height: 1.2em;
+}
+
+.sample-textbox{
+		font-family: 'Bubbl', serif;
+		font-size: 1.75rem;
+		line-height: 1.2em;
+		width: 100%;
+		height: 5em;
+		margin-top: 0.8rem;
+		border-radius: 12px;
+		padding: 8px;
+}
