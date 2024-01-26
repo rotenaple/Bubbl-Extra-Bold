@@ -2,7 +2,8 @@
     font-family: 'Bubbl';
     src: url('../Exports/24w04a/Bubbl-ExtraBold.otf') format('otf'),
 	url('../Exports/24w04a/Bubbl-ExtraBold.woff2') format('woff2'),
-	 url('../Exports/24w04a/Bubbl-ExtraBold.woff') format('woff');
+	url('../Exports/24w04a/Bubbl-ExtraBold.woff') format('woff');
+	font-weight: 800;
 }
 
 h1 {
