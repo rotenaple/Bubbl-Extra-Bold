@@ -7,32 +7,38 @@
 
 h1 {
 	font-family: "Bubbl";
+	font-weight: 800;
 }
 
 .sample-1{
 		font-family: 'Bubbl', serif;
+		font-weight: 800;
 		font-size: 1.25rem;
 		line-height: 1.2em;
 }
 .sample-2{
 		font-family: 'Bubbl', serif;
+		font-weight: 800;
 		font-size: 1.5rem;
 		line-height: 1.2em;
 }
 
 .sample-3{
 		font-family: 'Bubbl', serif;
+		font-weight: 800;
 		font-size: 1.75rem;
 		line-height: 1.2em;
 }
 .sample-4{
 		font-family: 'Bubbl', serif;
+		font-weight: 800;
 		font-size: 2rem;
 		line-height: 1.2em;
 }
 
 .sample-textbox{
 		font-family: 'Bubbl', serif;
+		font-weight: 800;
 		font-size: 1.75rem;
 		line-height: 1.2em;
 		width: 100%;
