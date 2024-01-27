@@ -39,6 +39,60 @@ h1 {
 	line-height: 1.2em;
 }
 
+.technical-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlarged-character {
+	visibility: collapse;
+	font-family: 'Bubbl', serif;
+	font-size: 8.5rem;
+	width: 14rem;
+	height: 16rem;
+    text-align: center;
+    vertical-align: middle;
+	position: sticky;
+    top: 100px;
+	margin-top: 4rem;
+	border-radius: 8px;
+	background-color: #fff;
+	display: inline-block;
+}
+
+.enlarged-character p {
+	transform: translateY(1.25rem);
+}
+
+#character-table{
+	width: 100%;
+}
+
+.character-subtable{
+	width: 100%;
+	border-spacing: 8px 2px;
+}
+
+.character-subtable tr td{
+	border: none;
+}
+
+.character-subtable tr:nth-child(odd) * {
+	font-family: 'Bubbl', serif;
+	font-size: 1.33rem;
+	text-align: center;;
+	border-radius: 8px;
+	width: 3rem;
+	height: 2.66rem;
+	color: #333;
+	background-color: #fff;
+}
+.character-subtable tr .unicode-code {
+	font-family: "IBM Plex Mono", sans-serif;
+	font-size: 0.66rem;
+	color: #333;
+}
+
 .sample-textbox,
 .sample-textbox:focus,
 .sample-textbox:hover {
@@ -102,5 +156,13 @@ button:active {
 	/* Adjust the min-width as needed */
 	button {
 		width: auto
+	}
+
+	.enlarged-character {
+		visibility: visible;
+	}
+
+	#character-table{
+		width: 65%;
 	}
 }
