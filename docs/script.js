@@ -26,13 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var toggleButton = document.getElementById('toggleDlig');
     var textbox = document.querySelector('.toggle');
+    var checkboxImage = toggleButton.querySelector('img');
 
     toggleButton.addEventListener('click', function() {
         textbox.classList.toggle('dlig-on');
         if (textbox.classList.contains('dlig-on')) {
-            toggleButton.textContent = 'Disable Discretionary Ligatures (dlig)';
+            checkboxImage.src = 'img/checkbox_1.svg';
         } else {
-            toggleButton.textContent = 'Enable Discretionary Ligatures (dlig)';
+            checkboxImage.src = 'img/checkbox_0.svg';
         }
     });
 });
