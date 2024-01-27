@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     populateUnicodeTable('basic-latin-table', 0x0020, 0x007F);
     populateUnicodeTable('latin-1-supplement-table', 0x00A0, 0x00FF);
     populateUnicodeTable('latin-ext-a-table', 0x0100, 0x017F);
+    disableAutoFeatures();
 });
 
 function autoExpand(field) {
@@ -67,4 +68,15 @@ function populateUnicodeTable(blockId, start, end) {
 function showEnlargedCharacter(character, code) {
     const enlargedCharacter = document.getElementById('enlarged-character');
     enlargedCharacter.innerHTML = `<p>${character}</p>`;
+}
+
+function disableAutoFeatures() {
+    const inputs = document.querySelectorAll('input');
+
+    inputs.forEach(input => {
+        input.setAttribute('autocomplete', 'off');
+        input.setAttribute('autocorrect', 'off');
+        input.setAttribute('autocapitalize', 'off');
+        input.setAttribute('spellcheck', 'false');
+    });
 }
