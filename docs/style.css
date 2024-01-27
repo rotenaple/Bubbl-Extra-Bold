@@ -6,10 +6,16 @@
     font-weight: 800;
 }
 
-h1, .sample-1, .sample-2, .sample-3, .sample-4, .character-subtable tr:nth-child(odd) *, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
+h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
     font-family: 'Bubbl', serif;
     font-weight: 800;
 }
+
+.character-subtable tr:nth-child(odd) *{
+    font-family: 'Bubbl', 'AdobeBlankRegular';
+    font-weight: 800;
+}
+
 
 .sample-1 { font-size: 1.25rem; }
 .sample-2 { font-size: 1.5rem; }
@@ -27,7 +33,7 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .character-subtable tr:nth-child
 
 .enlarged-character {
     visibility: collapse;
-	font-family: 'Bubbl', serif;
+	font-family: 'Bubbl', 'AdobeBlankRegular';
     font-size: 8.5rem;
     width: 14rem;
     height: 16rem;
