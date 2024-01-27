@@ -25,12 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var toggleButton = document.getElementById('toggleDlig');
-    var textbox = document.querySelector('.toggle');
+    var textboxes = document.querySelectorAll('.toggle');
     var checkboxImage = toggleButton.querySelector('img');
 
     toggleButton.addEventListener('click', function() {
-        textbox.classList.toggle('dlig-on');
-        if (textbox.classList.contains('dlig-on')) {
+        textboxes.forEach(function(textbox) {
+            textbox.classList.toggle('dlig-on');
+        });
+
+        if (textboxes[0].classList.contains('dlig-on')) {
             checkboxImage.src = 'img/checkbox_1.svg';
         } else {
             checkboxImage.src = 'img/checkbox_0.svg';
