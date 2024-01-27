@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var toggleButton = document.getElementById('toggleDlig');
-    var textbox = document.querySelector('.sample-textbox');
+    var textbox = document.querySelector('.toggle');
 
     toggleButton.addEventListener('click', function() {
         textbox.classList.toggle('dlig-on');
