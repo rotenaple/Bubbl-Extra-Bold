@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bubbl Extra Bold | rotenaple</title>
+    <meta name="keywords"
+        content="Bubbl Extra Bold, Display Font, Fun Font, Bold Typeface, Typeface Design, Font Project, Adelaide">
+    <meta name="author" content="rotenaple">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Discover Bubbl Extra Bold, a vibrant and bold display font ideal for a range of projects. Its bubbly design and extensive character list ensure versatility, enabling users to effectively express their ideas.">
 
     <link rel="apple-touch-icon" sizes="180x180" href="https://rotenaple.com/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://rotenaple.com/favicon/favicon-32x32.png">
@@ -19,17 +26,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Raleway:wght@600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/adobe-blank" type="text/css"/> 
     <link rel="stylesheet" type="text/css" href="https://rotenaple.com/style.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="https://rotenaple.com"><img class="rotenaple" src="https://rotenaple.com/img/rotenaple_mono.svg" /></a></li>
+                <li><a href="https://rotenaple.com"><img class="rotenaple"
+                            src="https://rotenaple.com/img/rotenaple_mono.svg" /></a></li>
                 <li><a class="nav-text" href="#contact"><ion-icon name="send"></ion-icon><span
                             class="nav-label">Contact</span></a></li>
             </ul>
@@ -39,62 +49,93 @@
     <div class="mainbody" id="root">
         <section id="about">
             <h1>Bubbl Extra Bold</h1>
-            <p>Bubbl Extra Bold is a fun and bold display font with a bubbly vibe. Great for all sorts of projects, it includes a broad selection of characters suitable for many Latin-based scripts and more. </p>
-
-        </section>
-
-        <section id="functions">
-            <h2>Features</h2>
-            <p>
-              Placeholder Text Here
-            </p>
+            <p>Bubbl Extra Bold is a fun and bold display font with a bubbly vibe. Great for all sorts of projects, it
+                includes a broad selection of characters suitable for many Latin-based scripts and more. </p>
 
         </section>
 
         <section id="overview">
             <h2>Project Overview</h2>
             <p>
-                Welcome! This project is where I refine my skills, so it's continually evolving. Each release is essentially a 'beta' version - a space for growth and improvement. Expect some shifts in glyph forms with different updates; it's all part of the development process and my journey in mastering this craft.
+                Welcome! This project is where I refine my skills, so it's continually evolving. Each release is
+                essentially a 'beta' version - a space for growth and improvement. Expect some shifts in glyph forms
+                with different updates; it's all part of the development process and my journey in mastering this craft.
             </p>
-            
+        </section>
+
+        <section id="technical">
+            <h2>Technical</h2>
+            <div class="technical-flex">
+                <div id="enlarged-character" class="enlarged-character">
+                    <p>A</p>
+                </div>
+                <div id="character-table">
+                    <div id="basic-latin">
+                        <h3>Basic Latin</h3>
+                        <table class="character-subtable" id="basic-latin-table"></table>
+                    </div>
+                    <div id="latin-1-supplement">
+                        <h3>Latin-1 Supplement</h3>
+                        <table class="character-subtable" id="latin-1-supplement-table"></table>
+                    </div>
+                    <div id="latin-ext-a">
+                        <h3>Latin Extended-A</h3>
+                        <table class="character-subtable" id="latin-ext-a-table"></table>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="demo">
             <h2>Demo</h2>
-            <p class="sample-1">How vexingly quick daft zebras jump! </p>
-            <p class="sample-2">Bubbl makes them look even more zany and quirky.</p>
-            <p class="sample-3">Don’t burst my Bubbl!</p>
-            <p class="sample-4">[doʊnt bɚst mə bʌb.əl]</p>
-            
-            <textarea class="sample-textbox" placeholder="Type something here!"></textarea>
+            <p class="sample-1 toggle">How vexingly quick daft zebras jump! </p>
+            <p class="sample-2 toggle">Bubbl makes them look even more zany and quirky.</p>
+            <p class="sample-3 toggle">Don’t burst my Bubbl!</p>
+
+            <textarea class="sample-textbox toggle" placeholder="Type something here!"></textarea>
+            <br>
+            <button class="button-container" id="toggleDlig">
+                <img class="toggleButton" src="img/checkbox_0.svg" alt="Toggle dlig">
+                <span>Discretionary Ligatures (dlig)</span>
+            </button>
 
 
         </section>
 
         <section id="download">
-          <h2>Get the Font</h2>
-          <p>
-              The font is available for download <a href="https://github.com/rotenaple/Bubbl-Extra-Bold/releases">here</a>.
-          </p>
-      </section>
+            <h2>Get the Font</h2>
+            <p>
+                The font is available for download <a
+                    href="https://github.com/rotenaple/Bubbl-Extra-Bold/releases">here</a>.
+            </p>
+            <h3>License</h3>
+            <p>This font is licensed under the <a href="https://opensource.org/licenses/Apache-2.0">Apache License
+                    2.0</a>, a widely used open source license. With this license, you are free to:</p>
+            <ul>
+                <li>Use the font in personal and commercial projects.</li>
+                <li>Modify and distribute the font, even for commercial purposes.</li>
+            </ul>
+            <p>Just remember to include the original copyright notice and license terms when redistributing.</p>
+
+        </section>
 
         <section id="projects">
             <h2>Other Things I Made</h2>
             <div id="project1">
-              <h3><a href="https://rotenaple.github.io/ISBN-Lookup/">ISBN Lookup</a></h3>
-              <p>
-                  ISBN Lookup is a tool for fetching book information using ISBNs, utilizing multiple free online
-                  sources. It offers quick, comprehensive searches and easy data retrieval.
-              </p>
-          </div>
+                <h3><a href="https://rotenaple.github.io/ISBN-Lookup/">ISBN Lookup</a></h3>
+                <p>
+                    ISBN Lookup is a tool for fetching book information using ISBNs, utilizing multiple free online
+                    sources. It offers quick, comprehensive searches and easy data retrieval.
+                </p>
+            </div>
 
-          <div id="project2">
-              <h3><a href="https://rotenaple.github.io/GPS-Path-Tracker/">GPS Path Tracker</a></h3>
-              <p>
-                  GPS Path Tracker is designed to track and display GPS paths. It utilizes the user's location data to
-                  provide real-time updates on position, speed, and ETA to predefined waypoints.
-              </p>
-          </div>
+            <div id="project2">
+                <h3><a href="https://rotenaple.github.io/GPS-Path-Tracker/">GPS Path Tracker</a></h3>
+                <p>
+                    GPS Path Tracker is designed to track and display GPS paths. It utilizes the user's location data to
+                    provide real-time updates on position, speed, and ETA to predefined waypoints.
+                </p>
+            </div>
 
         </section>
 
