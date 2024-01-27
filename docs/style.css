@@ -57,6 +57,7 @@ button {
 	color: #ccc;
 	background-color: #333;
 	padding: 8px 24px;
+	width: 100%;
 	border: none;
 	border-radius: 12px;
 	font-family: 'IBM Plex Mono', sans-serif;
@@ -68,3 +69,10 @@ button {
 .dlig-on {
 	font-feature-settings: 'dlig' 1;
   }  
+
+
+@media (min-width: 960px) { /* Adjust the min-width as needed */
+	button {
+		width: auto
+	}
+}
