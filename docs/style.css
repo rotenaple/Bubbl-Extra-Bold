@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Bubbl';
-    src: url('fonts/24w04a/Bubbl-ExtraBold.otf') format('otf'),
-	url('fonts/24w04a/Bubbl-ExtraBold.woff2') format('woff2'),
-	url('fonts//24w04a/Bubbl-ExtraBold.woff') format('woff');
+    src: url('fonts/24w04b/Bubbl-ExtraBold.otf') format('otf'),
+	url('fonts/24w04b/Bubbl-ExtraBold.woff2') format('woff2'),
+	url('fonts//24w04b/Bubbl-ExtraBold.woff') format('woff');
 	font-weight: 800;
 }
 
