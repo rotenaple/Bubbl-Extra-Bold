@@ -21,6 +21,7 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
 .sample-2 { font-size: 1.5rem; }
 .sample-3 { font-size: 1.75rem; }
 .sample-4 { font-size: 2rem; }
+.bubbl {font-family: "Bubbl";}
 
 .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
     line-height: 1.33m;
