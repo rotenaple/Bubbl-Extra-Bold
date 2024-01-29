@@ -16,6 +16,10 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
     font-weight: 800;
 }
 
+.color-1 { color: #bc4440; }
+.color-2 { color: #3e87c3; }
+.color-3 { color: #489916; }
+
 
 .sample-1 { font-size: 1.25rem; }
 .sample-2 { font-size: 1.5rem; }
@@ -24,7 +28,7 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
 .bubbl {font-family: "Bubbl";}
 
 .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
-    line-height: 1.33m;
+    line-height: 1.33;
 }
 
 .technical-flex {
@@ -86,7 +90,7 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
 .sample-textbox,
 .sample-textbox:focus,
 .sample-textbox:hover {
-    font-size: 1.75rem;
+    font-size: 21pt;
     width: 100%;
     height: 5em;
     margin-top: 0.8rem;
@@ -97,18 +101,6 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
     resize: none;
 }
 
-button {
-    color: #ccc;
-    background-color: #333;
-    padding: 8px 24px;
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    font-family: 'IBM Plex Mono', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    margin: 12px 0;
-}
 
 button:hover {
     background-color: #444;
@@ -118,10 +110,33 @@ button:active {
     background-color: #4C4C4C;
 }
 
+.flex-row-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Aligns items vertically center */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+.flex-row-container * {
+    margin-right: 10px; /* Spacing between buttons */
+}
+
 .button-container {
+    color: #ccc;
+    background-color: #333;
+    padding: 0 24px;
+    border: none;
+    border-radius: 12px;
+    height: 3rem;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 12px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
 }
 
 .toggleButton {
@@ -135,7 +150,15 @@ button:active {
 }
 
 @media (min-width: 960px) {
-    button { width: auto; }
+    button, .button-container { 
+        width: auto; 
+        margin-right: 2%;
+}
+
+    .flex-row-container{
+        flex-direction: row;
+
+    }
 
     .enlarged-character {
         font-size: 8.5rem;

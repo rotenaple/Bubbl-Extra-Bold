@@ -49,18 +49,20 @@
     <div class="mainbody" id="root">
         <section id="about">
             <h1>Bubbl Extra Bold</h1>
-            <h3>English</h3>
-            <p class="bubbl">Bubbl Extra Bold is a fun and bold display font with a bubbly vibe. Great for all sorts of
-                projects, it includes a broad selection of characters suitable for many Latin-based scripts and more.</p>
-            <h3>Tiếng Việt</h3>
-            <p class="bubbl">Bubbl Extra Bold là một phông chữ trình diễn vui nhộn và đậm nét với phong cách bong bóng.
-                Phông chữ này thích hợp cho nhiều dự án khác nhau, bao gồm một loạt các ký tự phù hợp với nhiều kịch bản
-                dựa trên tiếng Latin và hơn thế nữa.</p>
-            <h3>Čeština</h3>
-            <p class="bubbl">Bubbl Extra Bold je zábavný a tučný displejový font s bublinkovým vzhledem. Skvěle se hodí
-                pro všechny druhy projektů, obsahuje široký výběr znaků vhodných pro mnoho latinkových skriptů a další.
+            <p class="bubbl color-1">Bubbl Extra Bold is a fun and bold display font with a bubbly vibe. Great for
+                allsorts of projects, it includes a broad selection of characters suitable for many Latin-based scripts
+                and more.
             </p>
-       </section>
+            <h3 class="bubbl">Tiếng Việt</h3>
+            <p class="bubbl color-2" lang="vi">Bubbl Extra Bold là một phông chữ trình diễn vui nhộn và đậm nét với
+                phong cách bong bóng. Phông chữ này thích hợp cho nhiều dự án khác nhau, bao gồm một loạt các ký tự phù
+                hợp với nhiều kịch bản dựa trên tiếng Latin và hơn thế nữa.</p>
+            <h3 class="bubbl">Čeština</h3>
+            <p class="bubbl color-3" lang="cs">Bubbl Extra Bold je zábavný a tučný displejový font s bublinkovým
+                vzhledem. Skvěle se hodí pro všechny druhy projektů, obsahuje široký výběr znaků vhodných pro mnoho
+                latinkových skriptů a další.
+            </p>
+        </section>
 
         <section id="overview">
             <h2>Project Overview</h2>
@@ -96,17 +98,44 @@
 
         <section id="demo">
             <h2>Demo</h2>
-            <p class="sample-1 toggle">How vexingly quick daft zebras jump! </p>
-            <p class="sample-2 toggle">Bubbl makes them look even more zany and quirky.</p>
-            <p class="sample-3 toggle">Don’t burst my Bubbl!</p>
+            <p class="sample-1">How vexingly quick daft zebras jump! </p>
+            <p class="sample-2">Bubbl makes them look even more zany and quirky.</p>
+            <p class="sample-3">Don’t burst my Bubbl!</p>
+
+            <div class="flex-row-container">
+                <div class="button-container">
+                    <ion-icon name="text"></ion-icon>
+                    <ion-icon id="decreaseFontSize" name="remove-circle"></ion-icon>
+                    <select id="fontSizeDropdown">
+                        <option value="12">12px</option>
+                        <option value="16">16px</option>
+                        <option value="18">18px</option>
+                        <option value="21">21px</option>
+                        <option value="24" selected>24px</option>
+                        <option value="32">32px</option>
+                        <option value="36">36px</option>
+                        <option value="48">48px</option>
+                        <option value="60">60px</option>
+                        <option value="72">72px</option>
+                        <!-- Add more sizes as needed -->
+                    </select>
+                    <ion-icon id="increaseFontSize" name="add-circle"></ion-icon>
+                </div>
+
+                <button class="button-container" id="randomColorButton">
+                    <ion-icon name="color-fill"></ion-icon>
+                    <span>Randomise</span>
+                </button>
+
+                <button class="button-container" id="toggleDlig">
+                    <img class="toggleButton" src="img/checkbox_0.svg" alt="Toggle dlig">
+                    <span>Discretionary Ligatures</span>
+                </button>
+
+            </div>
 
             <textarea class="sample-textbox toggle" placeholder="Type something here!" spellcheck="false"></textarea>
             <br>
-            <button class="button-container" id="toggleDlig">
-                <img class="toggleButton" src="img/checkbox_0.svg" alt="Toggle dlig">
-                <span>Discretionary Ligatures (dlig)</span>
-            </button>
-
 
         </section>
 
