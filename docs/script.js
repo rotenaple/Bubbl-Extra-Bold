@@ -48,12 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Random Color Button
     const randomColorButton = document.getElementById('randomColorButton');
     randomColorButton.addEventListener('click', function () {
-        let rgb = generateValidRGB();
+        const { rgb, backgroundIsDark } = generateContrastValidRGB();
         let textColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
-        let backgroundIsDark = isBackgroundDark(rgb);
 
         textbox.style.color = textColor;
-        textbox.style.backgroundColor = backgroundIsDark ? '#EBEBEB' : '#333333';
+        textbox.style.backgroundColor = backgroundIsDark ? '#333333' : '#EBEBEB';
     });
 });
 
@@ -136,18 +135,32 @@ function autoExpand(field) {
     field.style.height = height + 'px';
 }
 
-function generateValidRGB() {
-    let rgb, avg, meetsDifferenceCriteria;
+function generateContrastValidRGB() {
+    let rgb, lightRatio, darkRatio, success, selectedBackground, reasonForFailure;
     do {
         rgb = {
             r: Math.floor(Math.random() * 256),
             g: Math.floor(Math.random() * 256),
             b: Math.floor(Math.random() * 256)
         };
-        avg = (rgb.r + rgb.g + rgb.b) / 3;
-        meetsDifferenceCriteria = checkChannelDifference(rgb);
-    } while ((avg >= 33 * 2.55 && avg <= 66 * 2.55) || !meetsDifferenceCriteria);
-    return rgb;
+        lightRatio = getContrastRatio(rgb, { r: 235, g: 235, b: 235 });
+        darkRatio = getContrastRatio(rgb, { r: 51, g: 51, b: 51 });
+        const channelDiffValid = checkChannelDifference(rgb);
+        success = (lightRatio >= 4.5 || darkRatio >= 4.5) && channelDiffValid;
+
+        if (!success) {
+            reasonForFailure = !channelDiffValid ? 'channeldiff' : 'contrast';
+        }
+
+        selectedBackground = darkRatio >= 4.5 && lightRatio < 4.5 ? 'dark' : 'light';
+
+        console.log(`Generating colour: [${rgb.r}, ${rgb.g}, ${rgb.b}] ${success ? 'success' : 'fail'} ${!success ? reasonForFailure : selectedBackground} light: [${lightRatio.toFixed(2)}] dark: [${darkRatio.toFixed(2)}]`);
+    } while (!success);
+
+    return {
+        rgb: rgb,
+        backgroundIsDark: selectedBackground === 'dark'
+    };
 }
 
 function checkChannelDifference(rgb) {
@@ -157,7 +170,21 @@ function checkChannelDifference(rgb) {
            Math.abs(rgb.g - rgb.b) > threshold;
 }
 
-function isBackgroundDark(rgb) {
-    let avg = (rgb.r + rgb.g + rgb.b) / 3;
-    return avg <= 66 * 2.55;
+function isContrastValid(rgb1, rgb2) {
+    const contrastRatio = getContrastRatio(rgb1, rgb2);
+    return contrastRatio >= 4.5; // WCAG AA minimum contrast ratio for normal text
+}
+
+function getLuminance(rgb) {
+    let a = [rgb.r, rgb.g, rgb.b].map(function (v) {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
+
+function getContrastRatio(rgb1, rgb2) {
+    let lum1 = getLuminance(rgb1);
+    let lum2 = getLuminance(rgb2);
+    return lum1 > lum2 ? (lum1 + 0.05) / (lum2 + 0.05) : (lum2 + 0.05) / (lum1 + 0.05);
 }
