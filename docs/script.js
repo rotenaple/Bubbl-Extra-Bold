@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const fontSizeDropdown = document.getElementById('fontSizeDropdown');
 
     // Generate random colors
-    const colors = generateColors();
-    document.querySelector('.color-1').style.color = colors[0];
-    document.querySelector('.color-2').style.color = colors[1];
-    document.querySelector('.color-3').style.color = colors[2];
+    updateColors();
+    setInterval(updateColors, 5000);
 
     // Auto-expand textarea and initialise font size
     textbox.addEventListener('input', function () {
@@ -143,57 +141,42 @@ function autoExpand(field) {
 
 
 // Color generation for accent text - returns three text colors on light background
-function hslToRgb(h, s, l) {
-    l /= 100;
-    const a = s * Math.min(l, 1 - l) / 100;
-    const f = n => {
-        const k = (n + h / 30) % 12;
-        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-        return Math.round(255 * color);
-    };
-    return [f(0), f(8), f(4)];
-}
-
-function contrastRatio(rgb1, rgb2) {
-    const luminance = rgb => {
-        const a = rgb.map(v => {
-            v /= 255;
-            return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
-        });
-        return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
-    };
-
-    const lum1 = luminance(rgb1);
-    const lum2 = luminance(rgb2);
-    const brightest = Math.max(lum1, lum2);
-    const darkest = Math.min(lum1, lum2);
-    return (brightest + 0.05) / (darkest + 0.05);
-}
-
 function generateColors() {
     let h = Math.floor(Math.random() * 360);
     const colors = [];
-    const baseColor = [235, 235, 235]; // RGB of #ebebeb
+    const baseColor = { r: 235, g: 235, b: 235 }; // RGB of #ebebeb as an object
     for (let i = 0; i < 3; i++) {
-        // Set saturation and lightness to avoid neon colors
-        let s = 50 + Math.floor(Math.random() * 30); // Saturation: 50-80%
-        let l = 60 + Math.floor(Math.random() * 30); // Lightness: 60-90%
-        let rgb, cr;
+        let s = 70 + Math.floor(Math.random() * 25); // Saturation: 50-90%
+        let l = 40 + Math.floor(Math.random() * 35); // Lightness: 20-75%
+        let rgbArray, rgbObject, cr;
         do {
-            rgb = hslToRgb(h, s, l);
-            cr = contrastRatio(rgb, baseColor);
-            if (cr < 4.5) {
-                l -= 5; // Adjust lightness to modify contrast
+            rgbArray = hslToRgb(h, s, l);
+            rgbObject = { r: rgbArray[0], g: rgbArray[1], b: rgbArray[2] }; // Convert array to object
+            cr = getContrastRatio(rgbObject, baseColor);
+            if (cr < 3) {
+                l -= 5; // Decrement lightness to increase contrast
+                if (l < 0) {
+                    break; // Break the loop if lightness is too low
+                }
             }
-        } while (cr < 4.5);
-        colors.push(`rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
-        h = (h + 90 + Math.floor(Math.random() * 61)) % 360;
+        } while (cr < 3);
+
+        if (l >= 0) {
+            console.log(`Accepted Color - HSL(${h}, ${s}, ${l}), RGB(${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b}), Contrast Ratio: ${cr.toFixed(2)}`);
+            colors.push(`rgb(${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b})`);
+        }
+
+        h = (h + 90 + Math.floor(Math.random() * 61)) % 360; // Adjust hue for the next color
     }
     return colors;
 }
 
-console.log(generateColors());
-
+function updateColors() {
+    const colors = generateColors();
+    document.querySelector('.color-1').style.color = colors[0];
+    document.querySelector('.color-2').style.color = colors[1];
+    document.querySelector('.color-3').style.color = colors[2];
+}
 
 // Color generation for textbox - returns one text color and corresponding background brightness
 function generateContrastValidRGB() {
@@ -210,9 +193,9 @@ function generateContrastValidRGB() {
 
         lightRatio = getContrastRatio(rgbObject, { r: 235, g: 235, b: 235 });
         darkRatio = getContrastRatio(rgbObject, { r: 51, g: 51, b: 51 });
-        success = (lightRatio >= 4.5 || darkRatio >= 4.5);
+        success = (lightRatio >= 3 || darkRatio >= 6);
 
-        selectedBackground = darkRatio >= 4.5 && lightRatio < 4.5 ? 'dark' : 'light';
+        selectedBackground = darkRatio <= 6 && lightRatio > 3 ? 'light' : 'dark';
 
         console.log(`Generating colour: [${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b}] ${success ? 'success' : 'fail'}, light: [${lightRatio.toFixed(2)}] dark: [${darkRatio.toFixed(2)}]`);
     } while (!success);
@@ -223,9 +206,26 @@ function generateContrastValidRGB() {
     };
 }
 
+function hslToRgb(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+        const k = (n + h / 30) % 12;
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+        return Math.round(255 * color);
+    };
+    return [f(0), f(8), f(4)];
+}
+
 function isContrastValid(rgb1, rgb2) {
     const contrastRatio = getContrastRatio(rgb1, rgb2);
     return contrastRatio >= 4.5; // WCAG AA minimum contrast ratio for normal text
+}
+
+function getContrastRatio(rgb1, rgb2) {
+    let lum1 = getLuminance(rgb1);
+    let lum2 = getLuminance(rgb2);
+    return lum1 > lum2 ? (lum1 + 0.05) / (lum2 + 0.05) : (lum2 + 0.05) / (lum1 + 0.05);
 }
 
 function getLuminance(rgb) {
@@ -234,10 +234,4 @@ function getLuminance(rgb) {
         return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
     });
     return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
-}
-
-function getContrastRatio(rgb1, rgb2) {
-    let lum1 = getLuminance(rgb1);
-    let lum2 = getLuminance(rgb2);
-    return lum1 > lum2 ? (lum1 + 0.05) / (lum2 + 0.05) : (lum2 + 0.05) / (lum1 + 0.05);
 }

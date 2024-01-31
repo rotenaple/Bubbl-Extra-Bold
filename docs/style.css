@@ -30,6 +30,10 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
     line-height: 1.33;
 }
 
+.color-1, .color-2, .color-3 {
+    transition: color 0.5s ease-in-out;
+}
+
 .technical-flex {
     display: flex;
     flex-direction: column;
@@ -98,6 +102,9 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
     padding: 0.5rem 2%;
     margin: 0.8rem -2%;
     resize: none;
+    transition: color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+
 }
 
 
