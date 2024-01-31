@@ -40,11 +40,13 @@ sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focu
 
 .title {margin-bottom: 2.5rem;}
 .title h1 {
-    line-height: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1;
     font-size: 3.25rem;
 }
 .title h2 {
-    line-height: 1rem;
+    margin-top: 0;
+    line-height: 1;
     font-size: 2.5rem;
 }
 
@@ -196,6 +198,7 @@ canvas {
     left: 0;
     z-index: -1;
     height: 100%;
+    width: 100%;
 }
 
 #canvas__wrapper {
