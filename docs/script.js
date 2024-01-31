@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const textboxes = document.querySelectorAll('.toggle');
     const fontSizeDropdown = document.getElementById('fontSizeDropdown');
 
+    // Generate random colors
+    const colors = generateColors();
+    document.querySelector('.color-1').style.color = colors[0];
+    document.querySelector('.color-2').style.color = colors[1];
+    document.querySelector('.color-3').style.color = colors[2];
+
     // Auto-expand textarea and initialise font size
     textbox.addEventListener('input', function () {
         updateTextboxFontSize(fontSizeDropdown.value, textbox);
@@ -135,39 +141,86 @@ function autoExpand(field) {
     field.style.height = height + 'px';
 }
 
-function generateContrastValidRGB() {
-    let rgb, lightRatio, darkRatio, success, selectedBackground, reasonForFailure;
-    do {
-        rgb = {
-            r: Math.floor(Math.random() * 256),
-            g: Math.floor(Math.random() * 256),
-            b: Math.floor(Math.random() * 256)
-        };
-        lightRatio = getContrastRatio(rgb, { r: 235, g: 235, b: 235 });
-        darkRatio = getContrastRatio(rgb, { r: 51, g: 51, b: 51 });
-        const channelDiffValid = checkChannelDifference(rgb);
-        success = (lightRatio >= 4.5 || darkRatio >= 4.5) && channelDiffValid;
 
-        if (!success) {
-            reasonForFailure = !channelDiffValid ? 'channeldiff' : 'contrast';
-        }
+// Color generation for accent text - returns three text colors on light background
+function hslToRgb(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+        const k = (n + h / 30) % 12;
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+        return Math.round(255 * color);
+    };
+    return [f(0), f(8), f(4)];
+}
+
+function contrastRatio(rgb1, rgb2) {
+    const luminance = rgb => {
+        const a = rgb.map(v => {
+            v /= 255;
+            return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+        });
+        return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+    };
+
+    const lum1 = luminance(rgb1);
+    const lum2 = luminance(rgb2);
+    const brightest = Math.max(lum1, lum2);
+    const darkest = Math.min(lum1, lum2);
+    return (brightest + 0.05) / (darkest + 0.05);
+}
+
+function generateColors() {
+    let h = Math.floor(Math.random() * 360);
+    const colors = [];
+    const baseColor = [235, 235, 235]; // RGB of #ebebeb
+    for (let i = 0; i < 3; i++) {
+        // Set saturation and lightness to avoid neon colors
+        let s = 50 + Math.floor(Math.random() * 30); // Saturation: 50-80%
+        let l = 60 + Math.floor(Math.random() * 30); // Lightness: 60-90%
+        let rgb, cr;
+        do {
+            rgb = hslToRgb(h, s, l);
+            cr = contrastRatio(rgb, baseColor);
+            if (cr < 4.5) {
+                l -= 5; // Adjust lightness to modify contrast
+            }
+        } while (cr < 4.5);
+        colors.push(`rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
+        h = (h + 90 + Math.floor(Math.random() * 61)) % 360;
+    }
+    return colors;
+}
+
+console.log(generateColors());
+
+
+// Color generation for textbox - returns one text color and corresponding background brightness
+function generateContrastValidRGB() {
+    let rgbArray, rgbObject, lightRatio, darkRatio, success, selectedBackground;
+    do {
+        // Generate random HSL values, avoid greys
+        const h = Math.floor(Math.random() * 360);
+        const s = 50 + Math.floor(Math.random() * 40); // Saturation: 50-90%
+        const l = 25 + Math.floor(Math.random() * 55); // Lightness: 25-80%
+        
+        // Convert HSL to RGB and then to object
+        rgbArray = hslToRgb(h, s, l);
+        rgbObject = { r: rgbArray[0], g: rgbArray[1], b: rgbArray[2] };
+
+        lightRatio = getContrastRatio(rgbObject, { r: 235, g: 235, b: 235 });
+        darkRatio = getContrastRatio(rgbObject, { r: 51, g: 51, b: 51 });
+        success = (lightRatio >= 4.5 || darkRatio >= 4.5);
 
         selectedBackground = darkRatio >= 4.5 && lightRatio < 4.5 ? 'dark' : 'light';
 
-        console.log(`Generating colour: [${rgb.r}, ${rgb.g}, ${rgb.b}] ${success ? 'success' : 'fail'} ${!success ? reasonForFailure : selectedBackground} light: [${lightRatio.toFixed(2)}] dark: [${darkRatio.toFixed(2)}]`);
+        console.log(`Generating colour: [${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b}] ${success ? 'success' : 'fail'}, light: [${lightRatio.toFixed(2)}] dark: [${darkRatio.toFixed(2)}]`);
     } while (!success);
 
     return {
-        rgb: rgb,
+        rgb: rgbObject,
         backgroundIsDark: selectedBackground === 'dark'
     };
-}
-
-function checkChannelDifference(rgb) {
-    const threshold = 0.2 * 255; // 20% of 255
-    return Math.abs(rgb.r - rgb.g) > threshold || 
-           Math.abs(rgb.r - rgb.b) > threshold || 
-           Math.abs(rgb.g - rgb.b) > threshold;
 }
 
 function isContrastValid(rgb1, rgb2) {

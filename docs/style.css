@@ -5,6 +5,10 @@
          url('fonts//24w05a/Bubbl-ExtraBold.woff') format('woff');
     font-weight: 800;
 }
+@font-face {
+    font-family: 'AdobeBlankRegular';
+    src: url('adobe_blank/AdobeBlank.woff') format(woff);
+}
 
 h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
     font-family: 'Bubbl', serif;
@@ -15,11 +19,6 @@ h1, .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox
     font-family: 'Bubbl', 'AdobeBlankRegular';
     font-weight: 800;
 }
-
-.color-1 { color: #bc4440; }
-.color-2 { color: #3e87c3; }
-.color-3 { color: #489916; }
-
 
 .sample-1 { font-size: 1.25rem; }
 .sample-2 { font-size: 1.5rem; }
