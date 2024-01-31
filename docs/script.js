@@ -153,13 +153,13 @@ function generateColors() {
             rgbArray = hslToRgb(h, s, l);
             rgbObject = { r: rgbArray[0], g: rgbArray[1], b: rgbArray[2] }; // Convert array to object
             cr = getContrastRatio(rgbObject, baseColor);
-            if (cr < 3) {
+            if (cr < 4.5) {
                 l -= 5; // Decrement lightness to increase contrast
                 if (l < 0) {
                     break; // Break the loop if lightness is too low
                 }
             }
-        } while (cr < 3);
+        } while (cr < 4.5);
 
         if (l >= 0) {
             console.log(`Accepted Color - HSL(${h}, ${s}, ${l}), RGB(${rgbObject.r}, ${rgbObject.g}, ${rgbObject.b}), Contrast Ratio: ${cr.toFixed(2)}`);
