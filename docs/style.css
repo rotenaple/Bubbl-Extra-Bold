@@ -11,7 +11,7 @@
     src: url('adobe_blank/AdobeBlank.woff') format(woff);
 }
 
-sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
+.sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
     font-family: 'Bubbl', serif;
     font-weight: 800;
 }
