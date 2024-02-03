@@ -12,7 +12,7 @@
 }
 
 .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
-    font-family: 'Bubbl', serif;
+    font-family: 'Bubbl', sans-serif;
     font-weight: 800;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .bubbl {
-    font-family: "Bubbl";
+    font-family: "Bubbl", sans-serif;
 }
 
 .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
