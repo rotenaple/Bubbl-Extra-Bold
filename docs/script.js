@@ -105,6 +105,9 @@ function generateAndPopulateUnicodeTable(blockId, start, end) {
 
 function populateUnicodeTableFromList(blockId, charList, dlig = false) {
     const table = document.getElementById(blockId);
+    if (!table) {
+        return; // Exit the function if the element does not exist
+    }
     let html = '<tr>';
     charList.forEach((item, index) => {
         // Start a new row for characters every 8 characters
@@ -143,6 +146,9 @@ function populateUnicodeTableFromList(blockId, charList, dlig = false) {
 
 function showEnlargedCharacter(character, addDlig) {
     const enlargedCharacter = document.getElementById('enlarged-character');
+    if (!enlargedCharacter) {
+        return; // Exit the function if the element does not exist
+    }
     enlargedCharacter.innerHTML = `<p>${character}</p>`;
 
     // Check the addDlig flag to decide on adding or removing the 'dlig-on' class
