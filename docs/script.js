@@ -22,9 +22,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Populate Unicode tables
-    populateUnicodeTable('basic-latin-table', 0x0020, 0x007F);
-    populateUnicodeTable('latin-1-supplement-table', 0x00A0, 0x00FF);
-    populateUnicodeTable('latin-ext-a-table', 0x0100, 0x017F);
+    generateAndPopulateUnicodeTable('basic-latin-table', 0x0020, 0x007F);
+    generateAndPopulateUnicodeTable('latin-1-supplement-table', 0x00A0, 0x00FF);
+    generateAndPopulateUnicodeTable('latin-ext-a-table', 0x0100, 0x017F);
+    generateAndPopulateUnicodeTable('latin-ext-b-table', 0x0180, 0x24F);
+    generateAndPopulateUnicodeTable('ipa-ext-table', 0x0250, 0x2AF);
+    generateAndPopulateUnicodeTable('greek-table', 0x0370, 0x03FF);
+
+
+    let liga = [
+        { char: "ff" },
+        { char: "ft" },
+        { char: "fi" },
+        { char: "ffi" },
+        { char: "ti" },
+        { char: "tti" },
+        { char: "fj" },
+        { char: "ffj" },
+        { char: "tj" },
+        { char: "ttj" }
+    ];
+    populateUnicodeTableFromList("liga-table", liga, false);
+
+    let dlig = [
+        { char: "QU" },
+        { char: "Qu" },
+        { char: "qu" },
+        { char: "LL" },
+        { char: "as" },
+        { char: "es" },
+        { char: "is" },
+        { char: "us" },
+    ]
+    populateUnicodeTableFromList("dlig-table", dlig, true);
+
 
     // Disable autocorrection
     disableAutoFeatures();
@@ -60,38 +91,66 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function populateUnicodeTable(blockId, start, end) {
-    const table = document.getElementById(blockId);
-    let html = '';
 
+function generateAndPopulateUnicodeTable(blockId, start, end) {
+    let charList = [];
     for (let i = start; i <= end; i++) {
+        const char = String.fromCharCode(i);
+        const code = `U+${i.toString(16).toUpperCase().padStart(4, '0')}`;
+        charList.push({ char, code });
+    }
+    
+    populateUnicodeTableFromList(blockId, charList);
+}
+
+function populateUnicodeTableFromList(blockId, charList, dlig = false) {
+    const table = document.getElementById(blockId);
+    let html = '<tr>';
+    charList.forEach((item, index) => {
         // Start a new row for characters every 8 characters
-        if ((i - start) % 8 === 0) {
-            if (i !== start) {
-                html += '</tr><tr>'; // End the previous row of codes and start a new row for characters
-            }
+        if (index % 8 === 0 && index !== 0) {
+            html += '</tr><tr>';
         }
 
-        // Add the character cell
-        html += `<td onmouseover="showEnlargedCharacter('&#${i};', '${`U+${i.toString(16).toUpperCase().padStart(4, '0')}`}')">&#${i};</td>`;
+        // Add the character cell with a conditional dlig class
+        const dligClass = dlig ? "dlig-on" : "";
+        html += `<td class="${dligClass}" onmouseover="showEnlargedCharacter('${item.char}', ${dlig})">${item.char}</td>`;
 
         // Add the Unicode code cell at the end of the row
-        if ((i - start) % 8 === 7 || i === end) {
-            html += '</tr><tr>'; // End the row for characters and start a new row for codes
-            for (let j = i - 7; j <= i; j++) {
-                let paddedCode = j.toString(16).toUpperCase().padStart(4, '0');
-                html += `<td class="unicode-code">${paddedCode}</td>`;
+        // Only add code cells if index % 8 === 7 (end of a row) or it's the last item
+        if ((index % 8 === 7 || index === charList.length - 1) && item.char.length === 1) {
+            html += '</tr><tr>'; // Prepare for code row
+            const start = Math.max(index - 7, 0); // Ensure start is not negative
+            for (let j = start; j <= index; j++) {
+                if (charList[j].char.length === 1) {
+                    // Only add the Unicode code for single characters
+                    html += `<td class="unicode-code">${charList[j].code}</td>`;
+                } else {
+                    // For longer strings, add an empty cell or some placeholder
+                    html += `<td class="unicode-code">-</td>`;
+                }
             }
+        } else if (index % 8 === 7 || index === charList.length - 1) {
+            // Close the row for cases where the last item in a row is a longer string
+            html += '</tr><tr>';
         }
-    }
+    });
 
-    html += '</tr>'; // Close the final row
+        html += '</tr>'; // Close the final row if it wasn't closed already
+
     table.innerHTML = html;
 }
 
-function showEnlargedCharacter(character, code) {
+function showEnlargedCharacter(character, addDlig) {
     const enlargedCharacter = document.getElementById('enlarged-character');
     enlargedCharacter.innerHTML = `<p>${character}</p>`;
+
+    // Check the addDlig flag to decide on adding or removing the 'dlig-on' class
+    if (addDlig) {
+        enlargedCharacter.classList.add('dlig-on');
+    } else {
+        enlargedCharacter.classList.remove('dlig-on');
+    }
 }
 
 function toggleDlig(textboxes, checkboxImage) {
