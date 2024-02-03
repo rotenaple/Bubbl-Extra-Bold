@@ -15323,7 +15323,7 @@ unicode = 0144;
 {
 color = 4;
 glyphname = napostrophe;
-lastChange = "2024-02-03 00:32:52 +0000";
+lastChange = "2024-02-03 10:34:06 +0000";
 layers = (
 {
 components = (
@@ -33338,7 +33338,7 @@ unicode = 003B;
 {
 color = 4;
 glyphname = ellipsis;
-lastChange = "2024-02-03 00:32:19 +0000";
+lastChange = "2024-02-03 10:33:24 +0000";
 layers = (
 {
 components = (
@@ -34289,7 +34289,7 @@ unicode = 2019;
 {
 color = 4;
 glyphname = guillemetleft;
-lastChange = "2024-02-03 00:32:45 +0000";
+lastChange = "2024-02-03 10:34:12 +0000";
 layers = (
 {
 components = (
@@ -34315,7 +34315,7 @@ unicode = 00AB;
 {
 color = 4;
 glyphname = guillemetright;
-lastChange = "2024-02-03 00:32:45 +0000";
+lastChange = "2024-02-03 10:34:12 +0000";
 layers = (
 {
 components = (
