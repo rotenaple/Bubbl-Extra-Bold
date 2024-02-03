@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggleDlig');
     const textboxes = document.querySelectorAll('.toggle');
     const fontSizeDropdown = document.getElementById('fontSizeDropdown');
+    const randomColorButton = document.getElementById('randomColorButton');
+    
 
     // Generate random colors
     updateColors();
@@ -81,14 +83,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Random Color Button
-    const randomColorButton = document.getElementById('randomColorButton');
-    randomColorButton.addEventListener('click', function () {
-        const { rgb, backgroundIsDark } = generateContrastValidRGB();
-        let textColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
-
-        textbox.style.color = textColor;
-        textbox.style.backgroundColor = backgroundIsDark ? '#333333' : '#EBEBEB';
+    randomColorButton.addEventListener('click', function () { 
+        applyTextboxColor(textbox);
     });
+    applyTextboxColor(textbox);
+
 });
 
 
@@ -244,6 +243,15 @@ function updateColors() {
 }
 
 // Color generation for textbox - returns one text color and corresponding background brightness
+
+function applyTextboxColor(textbox) {
+    const { rgb, backgroundIsDark } = generateContrastValidRGB();
+    let textColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+
+    textbox.style.color = textColor;
+    textbox.style.backgroundColor = backgroundIsDark ? '#333333' : '#EBEBEB';
+}
+
 function generateContrastValidRGB() {
     let rgbArray, rgbObject, lightRatio, darkRatio, success, selectedBackground;
     do {
