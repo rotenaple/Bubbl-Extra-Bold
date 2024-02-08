@@ -1,10 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
     const textbox = document.querySelector('.sample-textbox');
-    const toggleButton = document.getElementById('toggleDlig');
-    const textboxes = document.querySelectorAll('.toggle');
+    const dligCheckbox = document.getElementById('dligCheckbox');    const textboxes = document.querySelectorAll('.toggle');
     const fontSizeDropdown = document.getElementById('fontSizeDropdown');
     const randomColorButton = document.getElementById('randomColorButton');
-    
+
+    // Define the font version
+    var fontVersion = '24w06a';
+
+    // Dynamically create the @font-face rule and append it to the document
+    var fontFaceStyle = document.createElement('style');
+    fontFaceStyle.innerHTML = `
+        @font-face {
+            font-family: 'Bubbl';
+            src: url('fonts/${fontVersion}/Bubbl-ExtraBold.otf') format('otf'),
+                 url('fonts/${fontVersion}/Bubbl-ExtraBold.woff2') format('woff2'),
+                 url('fonts/${fontVersion}/Bubbl-ExtraBold.woff') format('woff');
+            font-weight: 800;
+        }`;
+    document.head.appendChild(fontFaceStyle);
+    var fontVersionElement = document.getElementById('fontVersion');
+    if (fontVersionElement) {
+        fontVersionElement.textContent = fontVersion;
+    }
+
 
     // Generate random colors
     updateColors();
@@ -19,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
     textbox.style.fontSize = fontSizeDropdown.value + 'px';
 
     // Toggle discretionary ligatures
-    toggleButton.addEventListener('click', function () {
-        toggleDlig(textboxes, this.querySelector('img'));
+    dligCheckbox.addEventListener('change', function () {
+        toggleDlig(textboxes, this.checked);
     });
 
     // Populate Unicode tables
@@ -83,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Random Color Button
-    randomColorButton.addEventListener('click', function () { 
+    randomColorButton.addEventListener('click', function () {
         applyTextboxColor(textbox);
     });
     applyTextboxColor(textbox);
@@ -98,7 +116,7 @@ function generateAndPopulateUnicodeTable(blockId, start, end) {
         const code = `U+${i.toString(16).toUpperCase().padStart(4, '0')}`;
         charList.push({ char, code });
     }
-    
+
     populateUnicodeTableFromList(blockId, charList);
 }
 
@@ -138,7 +156,7 @@ function populateUnicodeTableFromList(blockId, charList, dlig = false) {
         }
     });
 
-        html += '</tr>'; // Close the final row if it wasn't closed already
+    html += '</tr>'; // Close the final row if it wasn't closed already
 
     table.innerHTML = html;
 }
@@ -158,9 +176,14 @@ function showEnlargedCharacter(character, addDlig) {
     }
 }
 
-function toggleDlig(textboxes, checkboxImage) {
-    textboxes.forEach(textbox => textbox.classList.toggle('dlig-on'));
-    checkboxImage.src = textboxes[0].classList.contains('dlig-on') ? 'img/checkbox_1.svg' : 'img/checkbox_0.svg';
+function toggleDlig(textboxes, isChecked) {
+    textboxes.forEach(textbox => {
+        if (isChecked) {
+            textbox.classList.add('dlig-on');
+        } else {
+            textbox.classList.remove('dlig-on');
+        }
+    });
 }
 
 function disableAutoFeatures() {
@@ -259,7 +282,7 @@ function generateContrastValidRGB() {
         const h = Math.floor(Math.random() * 360);
         const s = 50 + Math.floor(Math.random() * 40); // Saturation: 50-90%
         const l = 25 + Math.floor(Math.random() * 55); // Lightness: 25-80%
-        
+
         // Convert HSL to RGB and then to object
         rgbArray = hslToRgb(h, s, l);
         rgbObject = { r: rgbArray[0], g: rgbArray[1], b: rgbArray[2] };

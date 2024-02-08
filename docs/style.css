@@ -1,12 +1,4 @@
 @font-face {
-    font-family: 'Bubbl';
-    src: url('fonts/24w06a/Bubbl-ExtraBold.otf') format('otf'),
-        url('fonts/24w06a/Bubbl-ExtraBold.woff2') format('woff2'),
-        url('fonts//24w06a/Bubbl-ExtraBold.woff') format('woff');
-    font-weight: 800;
-}
-
-@font-face {
     font-family: 'AdobeBlankRegular';
     src: url('adobe_blank/AdobeBlank.woff') format(woff);
 }
@@ -52,6 +44,11 @@
 
 .bubbl {
     font-family: "Bubbl", sans-serif;
+}
+
+.grey {
+    color: #888;
+    font-size: 11pt;
 }
 
 .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
