@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const randomColorButton = document.getElementById('randomColorButton');
 
     // Define the font version
-    var fontVersion = '24w06a';
+    var fontVersion = '24w07a';
 
     // Dynamically create the @font-face rule and append it to the document
     var fontFaceStyle = document.createElement('style');
