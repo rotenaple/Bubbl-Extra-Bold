@@ -1,0 +1,58 @@
+.carousel {
+    position: relative;
+    max-width: 100%;
+}
+
+.carousel-images div.slide {
+    width: auto;
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.carousel-images div.slide.active {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.carousel button {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50vh;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+    width: 36px;
+    height: 36px;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+.carousel .carousel-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.carousel .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 4px 0.5rem 4px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.carousel .dot.active {
+    background-color: #888;
+}
