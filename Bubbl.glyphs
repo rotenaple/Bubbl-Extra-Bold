@@ -2,13 +2,8 @@
 .appVersion = "118";
 DisplayStrings = (
 "/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf",
-"/zero.tosf/one.tosf/two.tosf/three.tosf/four.tosf/five.tosf/six.tosf/seven.tosf/eight.tosf/nine.tosf",
-"/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf \012/zero.tosf/one.tosf/two.tosf/three.tosf/four.tosf/five.tosf/six.tosf/seven.tosf/eight.tosf/nine.tosf",
-"/one.lf",
-"",
-"/zero.tf",
-"/one.osf/one.dnom",
-"/zero.lf/one.lf/two.lf/three.lf/four.lf/five.lf/six.lf/seven.lf/eight.lf/nine.lf \012/zero.osf/one.osf/two.osf/three.osf/four.osf/five.osf/six.osf/seven.osf/eight.osf/nine.osf \012/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf \012/zero.tosf/one.tosf/two.tosf/three.tosf/four.tosf/five.tosf/six.tosf/seven.tosf/eight.tosf/nine.tosf"
+"/zero.lf/one.lf/two.lf/three.lf/four.lf/five.lf/six.lf/seven.lf/eight.lf/nine.lf \012/zero.osf/one.osf/two.osf/three.osf/four.osf/five.osf/six.osf/seven.osf/eight.osf/nine.osf \012/zero.tf/one.tf/two.tf/three.tf/four.tf/five.tf/six.tf/seven.tf/eight.tf/nine.tf \012/zero.tosf/one.tosf/two.tosf/three.tosf/four.tosf/five.tosf/six.tosf/seven.tosf/eight.tosf/nine.tosf",
+"bruh/skull"
 );
 copyright = "Copyright (c) 2024, rotenaple (edward@rotenaple.com)";
 customParameters = (
@@ -98,7 +93,7 @@ value = "(\012    41,\012    792\012)";
 descender = -300;
 id = "BADE114B-EA49-45B4-AE36-72A7CEB6E1BE";
 userData = {
-GSCornerRadius = 16;
+GSCornerRadius = 12;
 };
 weightValue = 0;
 widthValue = 0;
@@ -16459,7 +16454,7 @@ unicode = 0144;
 {
 color = 4;
 glyphname = napostrophe;
-lastChange = "2024-06-03 06:47:30 +0000";
+lastChange = "2024-06-03 07:07:23 +0000";
 layers = (
 {
 components = (
@@ -31736,7 +31731,7 @@ unicode = 03A9;
 {
 color = 3;
 glyphname = Alphatonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -31758,7 +31753,7 @@ unicode = 0386;
 {
 color = 3;
 glyphname = Epsilontonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -31780,7 +31775,7 @@ unicode = 0388;
 {
 color = 3;
 glyphname = Etatonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -31802,7 +31797,7 @@ unicode = 0389;
 {
 color = 3;
 glyphname = Iotatonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -31824,7 +31819,7 @@ unicode = 038A;
 {
 color = 3;
 glyphname = Omicrontonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -31846,7 +31841,7 @@ unicode = 038C;
 {
 color = 3;
 glyphname = Upsilontonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -31872,7 +31867,7 @@ unicode = 038E;
 {
 color = 3;
 glyphname = Omegatonos;
-lastChange = "2024-06-03 04:58:08 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -36879,7 +36874,7 @@ unicode = 003B;
 {
 color = 4;
 glyphname = ellipsis;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 07:24:26 +0000";
 layers = (
 {
 components = (
@@ -37895,7 +37890,7 @@ unicode = 007B;
 {
 color = 4;
 glyphname = braceright;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 09:38:26 +0000";
 layers = (
 {
 components = (
@@ -37970,7 +37965,7 @@ unicode = 005B;
 {
 color = 4;
 glyphname = bracketright;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 09:38:26 +0000";
 layers = (
 {
 components = (
@@ -38170,7 +38165,7 @@ unicode = 201A;
 {
 color = 4;
 glyphname = quotedblbase;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 09:38:26 +0000";
 layers = (
 {
 components = (
@@ -38193,7 +38188,7 @@ unicode = 201E;
 {
 color = 4;
 glyphname = quotedblleft;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 09:38:26 +0000";
 layers = (
 {
 components = (
@@ -38220,7 +38215,7 @@ unicode = 201C;
 {
 color = 4;
 glyphname = quotedblright;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 09:38:26 +0000";
 layers = (
 {
 components = (
@@ -38290,7 +38285,7 @@ unicode = 2019;
 {
 color = 4;
 glyphname = guillemetleft;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 13:15:42 +0000";
 layers = (
 {
 components = (
@@ -38314,7 +38309,7 @@ unicode = 00AB;
 {
 color = 4;
 glyphname = guillemetright;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 13:15:42 +0000";
 layers = (
 {
 components = (
@@ -38382,7 +38377,7 @@ unicode = 2039;
 {
 color = 4;
 glyphname = guilsinglright;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 13:15:42 +0000";
 layers = (
 {
 components = (
@@ -38402,7 +38397,7 @@ unicode = 203A;
 {
 color = 4;
 glyphname = quotedbl;
-lastChange = "2024-06-03 05:12:58 +0000";
+lastChange = "2024-06-03 13:15:42 +0000";
 layers = (
 {
 components = (
@@ -39216,6 +39211,228 @@ width = 325;
 );
 note = brokenbar;
 unicode = 00A6;
+},
+{
+glyphname = skull;
+lastChange = "2024-06-03 13:16:16 +0000";
+layers = (
+{
+layerId = "BADE114B-EA49-45B4-AE36-72A7CEB6E1BE";
+paths = (
+{
+closed = 1;
+nodes = (
+"350 266 OFFCURVE",
+"370 300 OFFCURVE",
+"390 300 CURVE SMOOTH",
+"410 300 OFFCURVE",
+"430 266 OFFCURVE",
+"433 249 CURVE",
+"436 235 OFFCURVE",
+"432 233 OFFCURVE",
+"425 233 CURVE SMOOTH",
+"355 233 LINE SMOOTH",
+"348 233 OFFCURVE",
+"344 235 OFFCURVE",
+"347 249 CURVE"
+);
+},
+{
+closed = 1;
+nodes = (
+"174 322 OFFCURVE",
+"135 361 OFFCURVE",
+"135 409 CURVE SMOOTH",
+"135 456 OFFCURVE",
+"174 495 OFFCURVE",
+"246 495 CURVE SMOOTH",
+"282 495 OFFCURVE",
+"311 466 OFFCURVE",
+"311 431 CURVE SMOOTH",
+"311 361 OFFCURVE",
+"272 322 OFFCURVE",
+"223 322 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"508 322 OFFCURVE",
+"469 361 OFFCURVE",
+"469 431 CURVE SMOOTH",
+"469 466 OFFCURVE",
+"498 495 OFFCURVE",
+"534 495 CURVE SMOOTH",
+"606 495 OFFCURVE",
+"645 456 OFFCURVE",
+"645 409 CURVE SMOOTH",
+"645 361 OFFCURVE",
+"606 322 OFFCURVE",
+"557 322 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"433 78 LINE SMOOTH",
+"440 78 OFFCURVE",
+"445 83 OFFCURVE",
+"445 90 CURVE SMOOTH",
+"445 131 LINE",
+"468 131 LINE",
+"468 90 LINE SMOOTH",
+"468 83 OFFCURVE",
+"473 78 OFFCURVE",
+"480 78 CURVE SMOOTH",
+"565 78 LINE SMOOTH",
+"572 78 OFFCURVE",
+"577 83 OFFCURVE",
+"577 90 CURVE SMOOTH",
+"577 126 LINE SMOOTH",
+"577 146 OFFCURVE",
+"585 158 OFFCURVE",
+"603 168 CURVE SMOOTH",
+"719 237 OFFCURVE",
+"750 278 OFFCURVE",
+"750 410 CURVE SMOOTH",
+"750 690 OFFCURVE",
+"624 840 OFFCURVE",
+"390 840 CURVE SMOOTH",
+"156 840 OFFCURVE",
+"30 690 OFFCURVE",
+"30 410 CURVE SMOOTH",
+"30 278 OFFCURVE",
+"61 237 OFFCURVE",
+"177 168 CURVE SMOOTH",
+"195 158 OFFCURVE",
+"203 146 OFFCURVE",
+"203 126 CURVE SMOOTH",
+"203 90 LINE SMOOTH",
+"203 83 OFFCURVE",
+"208 78 OFFCURVE",
+"215 78 CURVE SMOOTH",
+"300 78 LINE SMOOTH",
+"307 78 OFFCURVE",
+"312 83 OFFCURVE",
+"312 90 CURVE SMOOTH",
+"312 131 LINE",
+"335 131 LINE",
+"335 90 LINE SMOOTH",
+"335 83 OFFCURVE",
+"340 78 OFFCURVE",
+"347 78 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"204 12 LINE SMOOTH",
+"204 5 OFFCURVE",
+"209 0 OFFCURVE",
+"216 0 CURVE SMOOTH",
+"301 0 LINE SMOOTH",
+"308 0 OFFCURVE",
+"313 5 OFFCURVE",
+"313 12 CURVE SMOOTH",
+"313 46 LINE SMOOTH",
+"313 53 OFFCURVE",
+"308 58 OFFCURVE",
+"301 58 CURVE SMOOTH",
+"216 58 LINE SMOOTH",
+"209 58 OFFCURVE",
+"204 53 OFFCURVE",
+"204 46 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"336 12 LINE SMOOTH",
+"336 5 OFFCURVE",
+"341 0 OFFCURVE",
+"348 0 CURVE SMOOTH",
+"434 0 LINE SMOOTH",
+"441 0 OFFCURVE",
+"446 5 OFFCURVE",
+"446 12 CURVE SMOOTH",
+"446 46 LINE SMOOTH",
+"446 53 OFFCURVE",
+"441 58 OFFCURVE",
+"434 58 CURVE SMOOTH",
+"348 58 LINE SMOOTH",
+"341 58 OFFCURVE",
+"336 53 OFFCURVE",
+"336 46 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"467 12 LINE SMOOTH",
+"467 5 OFFCURVE",
+"472 0 OFFCURVE",
+"479 0 CURVE SMOOTH",
+"564 0 LINE SMOOTH",
+"571 0 OFFCURVE",
+"576 5 OFFCURVE",
+"576 12 CURVE SMOOTH",
+"576 46 LINE SMOOTH",
+"576 53 OFFCURVE",
+"571 58 OFFCURVE",
+"564 58 CURVE SMOOTH",
+"479 58 LINE SMOOTH",
+"472 58 OFFCURVE",
+"467 53 OFFCURVE",
+"467 46 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"204 32 LINE",
+"216 0 LINE",
+"564 0 LINE",
+"576 32 LINE"
+);
+}
+);
+width = 780;
+}
+);
+unicode = 1F480;
+},
+{
+glyphname = speakingHeadInSilhouette;
+lastChange = "2024-06-03 07:09:50 +0000";
+layers = (
+{
+layerId = "BADE114B-EA49-45B4-AE36-72A7CEB6E1BE";
+width = 600;
+}
+);
+unicode = 1F5E3;
+},
+{
+glyphname = moyai;
+lastChange = "2024-06-03 07:07:56 +0000";
+layers = (
+{
+layerId = "BADE114B-EA49-45B4-AE36-72A7CEB6E1BE";
+width = 600;
+}
+);
+unicode = 1F5FF;
+},
+{
+glyphname = nerdFace;
+lastChange = "2024-06-03 09:38:43 +0000";
+layers = (
+{
+layerId = "BADE114B-EA49-45B4-AE36-72A7CEB6E1BE";
+width = 600;
+}
+);
+unicode = 1F913;
 },
 {
 color = 3;
@@ -41031,6 +41248,17 @@ width = 1363;
 unicode = 2030;
 },
 {
+glyphname = clownFace;
+lastChange = "2024-06-03 07:08:36 +0000";
+layers = (
+{
+layerId = "BADE114B-EA49-45B4-AE36-72A7CEB6E1BE";
+width = 600;
+}
+);
+unicode = 1F921;
+},
+{
 color = 4;
 glyphname = dieresiscomb;
 lastChange = "2024-02-13 01:30:01 +0000";
@@ -42769,7 +42997,7 @@ unicode = 02C8;
 {
 color = 4;
 glyphname = tonos;
-lastChange = "2024-06-03 05:14:35 +0000";
+lastChange = "2024-06-03 09:38:36 +0000";
 layers = (
 {
 components = (
