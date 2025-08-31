@@ -18,7 +18,8 @@
 }
 
 .sample-2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-feature-settings: 'dlig'1;
 }
 
 .sample-3 {
@@ -53,6 +54,7 @@
 
 .sample-1, .sample-2, .sample-3, .sample-4, .sample-textbox, .sample-textbox:focus, .sample-textbox:hover {
     line-height: 1.33;
+
 }
 
 .color-1, .color-2, .color-3 {
